@@ -78,7 +78,7 @@ document.querySelectorAll('.fade-up').forEach(el => {
     gsap.from(el, {
         opacity: 0,
         y: 40,
-        duration: 0.2,
+        duration: 0.4,
         ease: "power2.in",
         scrollTrigger: {
             trigger: el,
@@ -114,8 +114,8 @@ document.querySelectorAll('.fade-scale').forEach(el => {
     gsap.from(el, {
         opacity: 0,
         scale: 0.8,
-        duration: 0.5,
-        ease: "power.out", 
+        duration: 0.7,
+        ease: "power3.in", 
         scrollTrigger: {
             trigger: el,
             start: "top 90%",
