@@ -73,4 +73,54 @@ document.querySelectorAll('[data-box]').forEach(box => {
     });
 });
 
+// GSAP Fade Up Animation
+document.querySelectorAll('.fade-up').forEach(el => {
+    gsap.from(el, {
+        opacity: 0,
+        y: 40,
+        duration: 0.2,
+        ease: "power2.in",
+        scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            toggleActions: "play reverse play reverse",
+            once:false,
+        }
+    });
+});
 
+// GSAP skewed zoom Animation with staggered buttons
+gsap.utils.toArray('.skew-zoom').forEach((el, i) => {
+    gsap.from(el, {
+        opacity: 0,
+        y: -40,
+        scale: 0.8,
+        skewY: 5,
+        duration: 0.8,
+        ease: "power3.out",
+        delay: i * 0.1, // Delay increases with index
+        scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            toggleActions: "play reverse play reverse",
+            once: false,
+        }
+    });
+});
+
+
+// GSAP skewed zoom Animation
+document.querySelectorAll('.fade-scale').forEach(el => {
+    gsap.from(el, {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.5,
+        ease: "power.out", 
+        scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            toggleActions: "play reverse play reverse",
+            once:false,
+        }
+    });
+});
