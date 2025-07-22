@@ -17,12 +17,22 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f8f6f4, #fbe1dc, #eceff1);
+    /* background: linear-gradient(135deg, #f8f6f4, #fbe1dc, #eceff1); */
     color: var(--text-dark);
     min-height: 100vh;
     background-attachment: fixed;
     overflow-x: hidden;
+    background: linear-gradient(270deg, #f8f6f4, #fbe1dc, #eceff1, #f0f4f8, #fceaea, #f3f0f7);
+    background-size: 1200% 1200%;
+    animation: gradientShift 30s ease infinite;
 }
+/* 
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+} */
+
 
 
 .floating-boxes {
@@ -64,7 +74,7 @@ body {
     border-radius: 8px;
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
-    padding: 8px;
+    padding: 5px;
     transition: all 0.4s ease;
 }
 
