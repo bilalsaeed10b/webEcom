@@ -101,7 +101,7 @@ gsap.utils.toArray('.skew-zoom').forEach((el, i) => {
         delay: i * 0.1, // Delay increases with index
         scrollTrigger: {
             trigger: el,
-            start: "top 90%",
+            start: "top 100%",
             toggleActions: "play reverse play reverse",
             once: false,
         }
