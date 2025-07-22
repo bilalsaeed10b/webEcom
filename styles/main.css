@@ -17,14 +17,31 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(160deg, #ffd7d0, #c9e0f0, #ffc7df);  
     color: var(--text-dark);
-    min-height: 150vh;
+    min-height: 100vh;
     background-attachment: fixed;
     overflow-x: hidden;
-    /* background: linear-gradient(270deg, #fbe1dc, #c9e0f0, #ecaac6, #b7f8cd, #20878c,#9f9f9f, #ffffff); */
-    /* background-size: 1200% 1200%;
-    animation: gradientShift 50s linear infinite; */
+}
+body.static-theme {
+  background: linear-gradient(160deg, #ffd7d0, #c9e0f0, #ffc7df);
+  min-height: 100vh;
+  background-attachment: fixed;
+
+}
+
+body.animated-theme {
+  background: linear-gradient(270deg, #fbe1dc, #c9e0f0, #ecaac6, #b7f8cd, #20878c, #9f9f9f, #ffffff);
+  background-size: 1200% 1200%;
+  animation: gradientShift 50s linear infinite;
+}
+
+#toggle-theme {
+  padding: 2px 5px;
+  background: #ffffff88;
+  border: 1px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 999;
 }
 
 @keyframes gradientShift {

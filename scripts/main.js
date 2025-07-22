@@ -89,6 +89,7 @@ document.querySelectorAll('.fade-up').forEach(el => {
     });
 });
 
+
 // GSAP skewed zoom Animation with staggered buttons
 gsap.utils.toArray('.skew-zoom').forEach((el, i) => {
     gsap.from(el, {
@@ -124,3 +125,19 @@ document.querySelectorAll('.fade-scale').forEach(el => {
         }
     });
 });
+
+ const body = document.body;
+  const toggleBtn = document.getElementById("toggle-theme");
+  const icon = document.getElementById("theme-icon");
+
+  // Set initial theme
+  body.classList.add("static-theme");
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("static-theme");
+    body.classList.toggle("animated-theme");
+
+    // Toggle icon
+    icon.classList.toggle("fa-sun");
+    icon.classList.toggle("fa-moon");
+  });
